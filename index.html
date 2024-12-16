@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DİZİ AD</title>
+</head>
+<body>
+    <p>Dizi Ad</p>
+    <p>SAPLAAA ÖMEER!!!!</p>
+
+    <div id="giris" onclick="girisYap()">......1.BÖLÜM İZLE</div>
+    <div id="cikis" onclick="cikisYap()" style="display:none;">Çıkış</div>
+
+    <div id="videoSection" style="display:none;">
+        <video id="video" controls height="240" width="400">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <p>......1.BÖLÜM</p>
+    </div>
+
+    <script>
+        function girisYap() {
+            document.getElementById('giris').style.display = 'none'; // Giriş yazısını gizle
+            document.getElementById('cikis').style.display = 'block'; // Çıkış butonunu göster
+            document.getElementById('videoSection').style.display = 'block'; // Video ve altındaki yazıyı göster
+        }
+
+        function cikisYap() {
+            document.getElementById('giris').style.display = 'block'; // Giriş yazısını tekrar göster
+            document.getElementById('cikis').style.display = 'none'; // Çıkış butonunu gizle
+            document.getElementById('videoSection').style.display = 'none'; // Video ve yazıyı gizle
+        }
+    </script>
+
+</body>
+</html>
